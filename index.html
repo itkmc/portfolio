@@ -136,25 +136,29 @@
         .about-me-text .social-links a {
             color: #007bff;
             font-size: 1.5em;
-            margin-left: 10px;
             transition: color 0.2s ease-in-out;
+            margin-left: 10px;
         }
 
         .about-me-text .social-links a:hover {
             color: #0056b3;
         }
-        
-        /* Font Awesome 아이콘과 동일하게 SVG 아이콘을 스타일링 */
-        .about-me-text .social-links a svg {
-            fill: currentColor;
-            width: 1em; /* 부모 font-size에 맞게 크기 조절 */
-            height: 1em;
-            vertical-align: middle; /* 깃허브 아이콘과 수직 정렬 */
-            position: relative;
-            top: -0.05em; /* 미세 조정 */
+
+        /* 이미지 아이콘 공통 스타일 */
+        .about-me-text .social-links a img {
+            width: 1.5em;
+            /* 아이콘 크기 통일 */
+            height: 1.5em;
+            /* 아이콘 크기 통일 */
+            vertical-align: middle;
+            /* 텍스트와 수직 정렬 */
         }
-
-
+        
+        /* 깃허브 아이콘 왼쪽 마진 제거 */
+        .about-me-text .social-links a:first-child {
+            margin-left: 0;
+        }
+        
         .about-me-text .contact-info p {
             margin: 5px 0;
             display: flex;
@@ -173,7 +177,6 @@
             gap: 30px;
             width: 100%;
             margin-bottom: 30px;
-            /* 새롭게 추가된 섹션과 간격 */
         }
 
         .education,
@@ -186,12 +189,10 @@
 
         .education {
             flex: 2;
-            /* 교육과정이 학력보다 넓은 공간 차지 */
         }
 
         .academic-background {
             flex: 1;
-            /* 학력이 교육과정보다 좁은 공간 차지 */
         }
 
         .education h3,
@@ -218,7 +219,6 @@
 
         .education ul li::before {
             content: "•";
-            /* 글머리 기호 */
             color: #007bff;
             font-weight: bold;
             display: inline-block;
@@ -239,29 +239,20 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
             text-align: center;
-            /* 이미지가 가운데 오도록 정렬 */
         }
 
         .skills-content-image {
             width: 100%;
-            /* 부모 컨테이너의 100%를 차지 */
             overflow: hidden;
-            /* 혹시 모를 넘침 방지 */
             display: flex;
-            /* 이미지 가운데 정렬을 위해 flexbox 사용 */
             justify-content: center;
-            /* 가로 중앙 정렬 */
             align-items: center;
-            /* 세로 중앙 정렬 (이미지 자체 크기가 크면 효과 없음) */
         }
 
         .skills-content-image img {
             max-width: 100%;
-            /* 부모 컨테이너를 넘지 않도록 최대 너비 설정 */
             height: auto;
-            /* 비율 유지 */
             display: block;
-            /* 이미지 하단 여백 제거 */
         }
 
         /* Responsive Design (My Skills 부분만 추가/수정) */
@@ -278,18 +269,13 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
-            /* Contact 섹션과 간격 */
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit,
-                minmax(180px, 1fr));
-            /* 프로젝트 카드 자동 정렬 */
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 25px;
-            /* 프로젝트 카드 간 간격 */
             margin-bottom: 40px;
-            /* Contact 섹션과의 간격 */
         }
 
         .project-card {
@@ -297,23 +283,19 @@
             border: 1px solid #eee;
             border-radius: 8px;
             overflow: hidden;
-            /* 이미지 모서리 둥글게 처리 */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             transition: transform 0.2s ease-in-out;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            /* 호버 시 살짝 위로 */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .project-card img {
             width: 100%;
             height: 150px;
-            /* 썸네일 높이 고정 */
             object-fit: cover;
-            /* 이미지가 카드에 꽉 차게 */
             border-bottom: 1px solid #eee;
         }
 
@@ -325,10 +307,9 @@
             text-align: center;
         }
 
-        /* Contact Section (프로젝트 섹션 안에 포함되어 있지만, 스타일은 분리) */
+        /* Contact Section */
         .contact-section {
             background-color: #f0f8ff;
-            /* My Skills와 유사한 배경색 */
             padding: 25px;
             border-radius: 8px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -343,7 +324,6 @@
             border-bottom: 1px solid #cceeff;
             padding-bottom: 10px;
             display: inline-block;
-            /* h3 밑줄을 텍스트 길이만큼만 */
         }
 
         .contact-section p {
@@ -391,12 +371,10 @@
 
             .skills-grid {
                 grid-template-columns: 1fr;
-                /* 모바일에서는 한 열로 정렬 */
             }
 
             .projects-grid {
                 grid-template-columns: 1fr;
-                /* 모바일에서는 한 열로 정렬 */
             }
 
             .my-skills,
@@ -443,14 +421,10 @@
                         <h3>강민창</h3>
                         <div class="social-links">
                             <a href="https://github.com/itkmc" target="_blank" title="GitHub">
-                                <i class="fa-brands fa-github"></i>
+                                <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/all-icons/github-0o12ge6mj4sn8hf8wkhe0uh.png/github-z8k88tf9kcyicd7j2m7bc.png?_a=DATAg1AAZAA0" alt="GitHub">
                             </a>
                             <a href="https://velog.io/@itkang0219" target="_blank" title="Velog">
-                                <svg role="img" viewBox="0 0 24 24" xmlns="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRov0YBOib2LZ3ViFpSZtJJNuWCNeMRZ7bAXg&s">
-                                    <title>Velog</title>
-                                    <path
-                                        d="M12 0L0 20.783h12L24 0H12zm0 18.006L6.598 8.87l2.802-4.853L12 11.29l2.6-4.48 2.8 4.85-5.4 9.14z" />
-                                </svg>
+                                <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/velog-pva875kefrrjplmr64sb.png/velog-h5p7x66jgid6eh4epnqf7.png?_a=DATAg1AAZAA0" alt="Velog">
                             </a>
                         </div>
                     </div>
@@ -542,4 +516,3 @@
 </body>
 
 </html>
-

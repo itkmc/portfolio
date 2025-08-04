@@ -2,492 +2,531 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>강민창 - 웹 개발자 포트폴리오</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강민창 - 웹 개발자 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <style>
-    /* General Body Styles */
-    body {
-      font-family: "Noto Sans KR", sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    main {
-      width: 100%;
-      max-width: 1000px;
-      /* 전체 컨텐츠의 최대 너비 */
-      padding: 20px;
-      box-sizing: border-box;
-    }
+        main {
+            width: 100%;
+            max-width: 1000px;
+            /* 전체 컨텐츠의 최대 너비 */
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-    a {
-      text-decoration: none;
-    }
+        a {
+            text-decoration: none;
+        }
 
-    /* Reusable Section Title Style (About Me, My Skills, My Projects, Contact) */
-    h2 {
-      font-size: 2em;
-      color: #007bff;
-      /* 파란색 계열 */
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      position: relative;
-      padding-bottom: 10px;
-    }
+        /* Reusable Section Title Style (About Me, My Skills, My Projects, Contact) */
+        h2 {
+            font-size: 2em;
+            color: #007bff;
+            /* 파란색 계열 */
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 10px;
+        }
 
-    h2::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 50px;
-      height: 3px;
-      background-color: #007bff;
-    }
+        h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #007bff;
+        }
 
-    /* Header Styles */
-    .main-header {
-      background-color: #fff;
-      width: 100%;
-      padding: 20px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 30px;
-    }
+        /* Header Styles */
+        .main-header {
+            background-color: #fff;
+            width: 100%;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
 
-    .main-header .header-content {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-    }
+        .main-header .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
 
-    .main-header p {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #333;
-      margin: 0;
-    }
+        .main-header p {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
 
-    .main-header .header-profile-img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #ddd;
-    }
+        .main-header .header-profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
+        }
 
-    /* About Me Section */
-    .about-me {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 30px;
-    }
+        /* About Me Section */
+        .about-me {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
 
-    .about-me-content {
-      display: flex;
-      align-items: flex-start;
-      gap: 30px;
-    }
+        .about-me-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
 
-    .about-me-profile-img {
-      width: 200px;
-      height: 200px;
-      border-radius: 8px;
-      object-fit: cover;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
+        .about-me-profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
 
-    .about-me-text {
-      flex-grow: 1;
-    }
+        .about-me-text {
+            flex-grow: 1;
+        }
 
-    .about-me-text h3 {
-      font-size: 1.8em;
-      color: #333;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
+        /* 강민창 이름과 아이콘을 담는 div 스타일 */
+        .about-me-text .name-and-links {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
 
-    .about-me-text .contact-info p {
-      margin: 5px 0;
-      display: flex;
-      align-items: center;
-      color: #555;
-    }
+        .about-me-text h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin: 0;
+            margin-right: 15px; /* 이름과 아이콘 사이 간격 */
+        }
 
-    .about-me-text .contact-info i {
-      margin-right: 8px;
-      color: #007bff;
-    }
+        .about-me-text .social-links a {
+            color: #007bff;
+            font-size: 1.5em;
+            margin-left: 10px;
+            transition: color 0.2s ease-in-out;
+        }
 
-    /* Sections Container (Education & Academic Background) */
-    .sections-container {
-      display: flex;
-      gap: 30px;
-      width: 100%;
-      margin-bottom: 30px;
-      /* 새롭게 추가된 섹션과 간격 */
-    }
+        .about-me-text .social-links a:hover {
+            color: #0056b3;
+        }
 
-    .education,
-    .academic-background {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+        .about-me-text .contact-info p {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            color: #555;
+        }
 
-    .education {
-      flex: 2;
-      /* 교육과정이 학력보다 넓은 공간 차지 */
-    }
+        .about-me-text .contact-info i {
+            margin-right: 8px;
+            color: #007bff;
+        }
 
-    .academic-background {
-      flex: 1;
-      /* 학력이 교육과정보다 좁은 공간 차지 */
-    }
+        /* Sections Container (Education & Academic Background) */
+        .sections-container {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            margin-bottom: 30px;
+            /* 새롭게 추가된 섹션과 간격 */
+        }
 
-    .education h3,
-    .academic-background h3 {
-      font-size: 1.6em;
-      color: #007bff;
-      margin-bottom: 15px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-    }
+        .education,
+        .academic-background {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-    .education ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+        .education {
+            flex: 2;
+            /* 교육과정이 학력보다 넓은 공간 차지 */
+        }
 
-    .education ul li {
-      margin-bottom: 10px;
-      padding-left: 15px;
-      position: relative;
-      color: #555;
-    }
+        .academic-background {
+            flex: 1;
+            /* 학력이 교육과정보다 좁은 공간 차지 */
+        }
 
-    .education ul li::before {
-      content: "•";
-      /* 글머리 기호 */
-      color: #007bff;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
+        .education h3,
+        .academic-background h3 {
+            font-size: 1.6em;
+            color: #007bff;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
 
-    .academic-background p {
-      margin: 5px 0;
-      color: #555;
-    }
+        .education ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-    /* My Skills Section */
-    .my-skills {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 30px;
-      text-align: center;
-      /* 이미지가 가운데 오도록 정렬 */
-    }
+        .education ul li {
+            margin-bottom: 10px;
+            padding-left: 15px;
+            position: relative;
+            color: #555;
+        }
 
-    .skills-content-image {
-      width: 100%;
-      /* 부모 컨테이너의 100%를 차지 */
-      overflow: hidden;
-      /* 혹시 모를 넘침 방지 */
-      display: flex;
-      /* 이미지 가운데 정렬을 위해 flexbox 사용 */
-      justify-content: center;
-      /* 가로 중앙 정렬 */
-      align-items: center;
-      /* 세로 중앙 정렬 (이미지 자체 크기가 크면 효과 없음) */
-    }
+        .education ul li::before {
+            content: "•";
+            /* 글머리 기호 */
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
 
-    .skills-content-image img {
-      max-width: 100%;
-      /* 부모 컨테이너를 넘지 않도록 최대 너비 설정 */
-      height: auto;
-      /* 비율 유지 */
-      display: block;
-      /* 이미지 하단 여백 제거 */
-      /* 실제 이미지 크기에 따라 조정이 필요할 수 있습니다. */
-      /* 예를 들어, 너무 커서 옆으로 튀어나온다면 max-width를 더 작게 설정하거나,
-       특정 너비/높이를 줄 수도 있습니다. */
-    }
+        .academic-background p {
+            margin: 5px 0;
+            color: #555;
+        }
 
-    /* Responsive Design (My Skills 부분만 추가/수정) */
-    @media (max-width: 768px) {
-      .my-skills {
-        padding: 20px;
-      }
-    }
+        /* My Skills Section */
+        .my-skills {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+            /* 이미지가 가운데 오도록 정렬 */
+        }
 
-    /* My Projects Section */
-    .my-projects {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 30px;
-      /* Contact 섹션과 간격 */
-    }
+        .skills-content-image {
+            width: 100%;
+            /* 부모 컨테이너의 100%를 차지 */
+            overflow: hidden;
+            /* 혹시 모를 넘침 방지 */
+            display: flex;
+            /* 이미지 가운데 정렬을 위해 flexbox 사용 */
+            justify-content: center;
+            /* 가로 중앙 정렬 */
+            align-items: center;
+            /* 세로 중앙 정렬 (이미지 자체 크기가 크면 효과 없음) */
+        }
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,
-          minmax(180px, 1fr));
-      /* 프로젝트 카드 자동 정렬 */
-      gap: 25px;
-      /* 프로젝트 카드 간 간격 */
-      margin-bottom: 40px;
-      /* Contact 섹션과의 간격 */
-    }
+        .skills-content-image img {
+            max-width: 100%;
+            /* 부모 컨테이너를 넘지 않도록 최대 너비 설정 */
+            height: auto;
+            /* 비율 유지 */
+            display: block;
+            /* 이미지 하단 여백 제거 */
+            /* 실제 이미지 크기에 따라 조정이 필요할 수 있습니다. */
+            /* 예를 들어, 너무 커서 옆으로 튀어나온다면 max-width를 더 작게 설정하거나,
+                특정 너비/높이를 줄 수도 있습니다. */
+        }
 
-    .project-card {
-      background-color: #fdfdfd;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      overflow: hidden;
-      /* 이미지 모서리 둥글게 처리 */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease-in-out;
-    }
+        /* Responsive Design (My Skills 부분만 추가/수정) */
+        @media (max-width: 768px) {
+            .my-skills {
+                padding: 20px;
+            }
+        }
 
-    .project-card:hover {
-      transform: translateY(-5px);
-      /* 호버 시 살짝 위로 */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+        /* My Projects Section */
+        .my-projects {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            /* Contact 섹션과 간격 */
+        }
 
-    .project-card img {
-      width: 100%;
-      height: 150px;
-      /* 썸네일 높이 고정 */
-      object-fit: cover;
-      /* 이미지가 카드에 꽉 차게 */
-      border-bottom: 1px solid #eee;
-    }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,
+                    minmax(180px, 1fr));
+            /* 프로젝트 카드 자동 정렬 */
+            gap: 25px;
+            /* 프로젝트 카드 간 간격 */
+            margin-bottom: 40px;
+            /* Contact 섹션과의 간격 */
+        }
 
-    .project-card .project-title {
-      padding: 15px;
-      font-weight: bold;
-      color: #333;
-      font-size: 1.1em;
-      text-align: center;
-    }
+        .project-card {
+            background-color: #fdfdfd;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            /* 이미지 모서리 둥글게 처리 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease-in-out;
+        }
 
-    /* Contact Section (프로젝트 섹션 안에 포함되어 있지만, 스타일은 분리) */
-    .contact-section {
-      background-color: #f0f8ff;
-      /* My Skills와 유사한 배경색 */
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-      text-align: center;
-    }
+        .project-card:hover {
+            transform: translateY(-5px);
+            /* 호버 시 살짝 위로 */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    .contact-section h3 {
-      font-size: 1.6em;
-      color: #007bff;
-      margin-top: 0;
-      margin-bottom: 15px;
-      border-bottom: 1px solid #cceeff;
-      padding-bottom: 10px;
-      display: inline-block;
-      /* h3 밑줄을 텍스트 길이만큼만 */
-    }
+        .project-card img {
+            width: 100%;
+            height: 150px;
+            /* 썸네일 높이 고정 */
+            object-fit: cover;
+            /* 이미지가 카드에 꽉 차게 */
+            border-bottom: 1px solid #eee;
+        }
 
-    .contact-section p {
-      font-size: 1.1em;
-      color: #555;
-    }
+        .project-card .project-title {
+            padding: 15px;
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+            text-align: center;
+        }
 
-    .contact-section a {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        /* Contact Section (프로젝트 섹션 안에 포함되어 있지만, 스타일은 분리) */
+        .contact-section {
+            background-color: #f0f8ff;
+            /* My Skills와 유사한 배경색 */
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
 
-    .contact-section a:hover {
-      text-decoration: underline;
-    }
+        .contact-section h3 {
+            font-size: 1.6em;
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #cceeff;
+            padding-bottom: 10px;
+            display: inline-block;
+            /* h3 밑줄을 텍스트 길이만큼만 */
+        }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .main-header .header-content {
-        flex-direction: column;
-        text-align: center;
-      }
+        .contact-section p {
+            font-size: 1.1em;
+            color: #555;
+        }
 
-      .main-header p {
-        margin-bottom: 10px;
-      }
+        .contact-section a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-      .about-me-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
 
-      .sections-container {
-        flex-direction: column;
-        gap: 20px;
-      }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-header .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
 
-      .education,
-      .academic-background {
-        width: 100%;
-        padding: 20px;
-      }
+            .main-header p {
+                margin-bottom: 10px;
+            }
 
-      .skills-grid {
-        grid-template-columns: 1fr;
-        /* 모바일에서는 한 열로 정렬 */
-      }
+            .about-me-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
 
-      .projects-grid {
-        grid-template-columns: 1fr;
-        /* 모바일에서는 한 열로 정렬 */
-      }
+            .sections-container {
+                flex-direction: column;
+                gap: 20px;
+            }
 
-      .my-skills,
-      .my-projects,
-      .about-me {
-        padding: 20px;
-      }
-    }
+            .education,
+            .academic-background {
+                width: 100%;
+                padding: 20px;
+            }
 
-    @media (max-width: 480px) {
-      .main-header p {
-        font-size: 1.2em;
-      }
+            .skills-grid {
+                grid-template-columns: 1fr;
+                /* 모바일에서는 한 열로 정렬 */
+            }
 
-      h2 {
-        font-size: 1.7em;
-      }
+            .projects-grid {
+                grid-template-columns: 1fr;
+                /* 모바일에서는 한 열로 정렬 */
+            }
 
-      .about-me-profile-img {
-        width: 150px;
-        height: 150px;
-      }
-    }
-  </style>
+            .my-skills,
+            .my-projects,
+            .about-me {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-header p {
+                font-size: 1.2em;
+            }
+
+            h2 {
+                font-size: 1.7em;
+            }
+
+            .about-me-profile-img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="header-content">
-      <p>👋 안녕하세요, 신입 웹 개발자 강민창입니다.</p>
-      <img src="https://velog.velcdn.com/images/itkang0219/post/9deddc26-7d14-4adb-b6c3-c7eedb7c0f52/image.jpg" alt="프로필 사진" class="header-profile-img">
-    </div>
-  </header>
-
-  <main>
-    <section class="about-me">
-      <h2>About Me*</h2>
-      <div class="about-me-content">
-        <img src="https://velog.velcdn.com/images/itkang0219/post/9deddc26-7d14-4adb-b6c3-c7eedb7c0f52/image.jpg" alt="프로필 사진" class="about-me-profile-img">
-        <div class="about-me-text">
-          <div class="contact-info">
-            <h3>강민창</h3>
-            <p><i class="fas fa-phone-alt"></i> 010-7516-3468</p>
-            <p><i class="fas fa-envelope"></i> itkang0219@gmail.com</p>
-          </div>
-          <p>
-            ◾ 이 포트폴리오는 제가 그동안 이뤄낸 결과물들을 담았습니다.
-          </p>
-          <p>
-            ◾ 새로운 기술을 배우고 활용하는 것을 즐기며, 늘 프로젝트를 통해 <br>팀
-            워크와 협업을 중요하게 생각합니다.
-          </p>
-          <p>
-            ◾ 앞으로 개발자로서 성장하며 사회에 긍정적인 영향을 만들고 회사에 <br>
-            기여하는 개발자가 되고 싶습니다.
-          </p>
+    <header class="main-header">
+        <div class="header-content">
+            <p>👋 안녕하세요, 신입 웹 개발자 강민창입니다.</p>
+            <img src="https://velog.velcdn.com/images/itkang0219/post/9deddc26-7d14-4adb-b6c3-c7eedb7c0f52/image.jpg"
+                alt="프로필 사진" class="header-profile-img">
         </div>
-      </div>
-    </section>
+    </header>
 
-    <section class="sections-container">
-      <div class="education">
-        <h3>교육과정</h3>
-        <ul>
-          <li><strong>코리아IT아카데미 DBMS 과정 </strong> | 2023.11.08 ~ 2023.12.05</li>
-          <li><strong>코리아IT아카데미 Python 과정</strong> | 2023.12.02 ~ 2024.02.04</li>
-          <li><strong>프롬프트 AI & Open API & 공공데이터를 활용한 웹/앱 개발자 양성 과정</strong> | 2023.12.07 ~ 2024.05.24</li>
-          <li><strong>코리아IT아카데미 JAVA 과정</strong> | 2024.02.17 ~ 2024.04.14</li>
-          <li><strong>코리아IT아카데미 C언어 과정</strong> | 2024.03.23 ~ 2024.05.19</li>
-          <li><strong>코리아IT아카데미 Linux 과정</strong> | 2024.04.20 ~ 2024.06.16</li>
-          <li><strong>(과정평가형) 정보처리산업기사 취득과정A </strong> | 2025.03.18 ~ 2025.08.14</li>
-        </ul>
-      </div>
+    <main>
+        <section class="about-me">
+            <h2>About Me*</h2>
+            <div class="about-me-content">
+                <img src="https://velog.velcdn.com/images/itkang0219/post/9deddc26-7d14-4adb-b6c3-c7eedb7c0f52/image.jpg"
+                    alt="프로필 사진" class="about-me-profile-img">
+                <div class="about-me-text">
+                    <div class="name-and-links">
+                        <h3>강민창</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/itkmc" target="_blank" title="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://velog.io/@itkang0219" target="_blank" title="Velog">
+                                <i class="fa-solid fa-blog"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone-alt"></i> 010-7516-3468</p>
+                        <p><i class="fas fa-envelope"></i> itkang0219@gmail.com</p>
+                    </div>
+                    <p>
+                        ◾ 이 포트폴리오는 제가 그동안 이뤄낸 결과물들을 담았습니다.
+                    </p>
+                    <p>
+                        ◾ 새로운 기술을 배우고 활용하는 것을 즐기며, 늘 프로젝트를 통해 <br>팀
+                        워크와 협업을 중요하게 생각합니다.
+                    </p>
+                    <p>
+                        ◾ 앞으로 개발자로서 성장하며 사회에 긍정적인 영향을 만들고 회사에 <br>
+                        기여하는 개발자가 되고 싶습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-      <div class="academic-background">
-        <h3>학력</h3>
-        <p>대전대신고등학교</p>
-        <p>| 2019.04 ~ 2021.02 |</p>
-      </div>
-    </section>
+        <section class="sections-container">
+            <div class="education">
+                <h3>교육과정</h3>
+                <ul>
+                    <li><strong>코리아IT아카데미 DBMS 과정 </strong> | 2023.11.08 ~ 2023.12.05</li>
+                    <li><strong>코리아IT아카데미 Python 과정</strong> | 2023.12.02 ~ 2024.02.04</li>
+                    <li><strong>프롬프트 AI & Open API & 공공데이터를 활용한 웹/앱 개발자 양성 과정</strong> | 2023.12.07 ~ 2024.05.24</li>
+                    <li><strong>코리아IT아카데미 JAVA 과정</strong> | 2024.02.17 ~ 2024.04.14</li>
+                    <li><strong>코리아IT아카데미 C언어 과정</strong> | 2024.03.23 ~ 2024.05.19</li>
+                    <li><strong>코리아IT아카데미 Linux 과정</strong> | 2024.04.20 ~ 2024.06.16</li>
+                    <li><strong>(과정평가형) 정보처리산업기사 취득과정A </strong> | 2025.03.18 ~ 2025.08.14</li>
+                </ul>
+            </div>
 
-    <section class="my-skills">
-      <h2>My Skills*</h2>
-      <div class="skills-content-image">
-        <img src="https://velog.velcdn.com/images/yunlinit/post/543e2881-2ecb-4c78-bcff-be8164e73b8a/image.png" alt="My Skills Overview Image">
-      </div>
-    </section>
+            <div class="academic-background">
+                <h3>학력</h3>
+                <p>대전대신고등학교</p>
+                <p>| 2019.04 ~ 2021.02 |</p>
+            </div>
+        </section>
 
-    <section class="my-projects">
-      <h2>My Projects*</h2>
-      <div class="projects-grid">
-        <a href="https://github.com/itkmc/24_project" target="blank" class="project-card">
-          <img src="https://velog.velcdn.com/images/itkang0219/post/182c1465-4e1c-4016-a3be-84f153ae23b7/image.png" alt="Project Thumbnail 1">
-          <div class="project-title">📖 타임라인으로 보는 역사 및 다양한 역사 콘텐츠</div>
-        </a>
-        <a href="https://github.com/itkmc/IMMusic_project" target="blank" class="project-card">
-          <img src="https://velog.velcdn.com/images/itkang0219/post/ed0c595e-0d4e-42d8-b507-189659d02df0/image.png" alt="Project Thumbnail 2">
-          <div class="project-title">🎹 클래식 음악단 소개하는 홈페이지</div>
-        </a>
-        <a href="https://github.com/itkmc/portfolio" target="blank" class="project-card">
-          <img src="https://velog.velcdn.com/images/itkang0219/post/86a9ed4d-1571-44fa-bbda-e2587d6ffb1f/image.png" alt="Project Thumbnail 3">
-          <div class="project-title">👩🏻‍💻 포트폴리오</div>
-        </a>
-        <a href="https://github.com/itkmc/The-Unclosed_project" target="blank" class="project-card">
-          <img src="https://velog.velcdn.com/images/itkang0219/post/2550aa2f-79cc-4607-a5ce-7b91944c82e8/image.png" alt="Project Thumbnail 4">
-          <div class="project-title">⚖ 우리나라 미제사건 소개 및 모의재판 웹 플랫폼</div>
-        </a>
-        <a href="https://github.com/itkmc/group_escape_room_project" target="blank" class="project-card">
-          <img src="https://velog.velcdn.com/images/itkang0219/post/4aa8bc1f-af82-4dd9-bd5f-4548ed545a75/image.png" alt="Project Thumbnail 5">
-          <div class="project-title">😱3D 웹 기술을 활용한 1인칭 공포 방탈출 게임</div>
-        </a>
-      </div>
-      <div class="contact-section">
-        <h3>Contact*</h3>
-        <p class="regular-text">📞 010-7518-3408</p>
-        <p class="regular-text">✉️ itkang0219@gmail.com</p>
-        <p>둘 중에 하나로 연락주시면 감사하겠습니다!!!</p>
-      </div>
-    </section>
-  </main>
+        <section class="my-skills">
+            <h2>My Skills*</h2>
+            <div class="skills-content-image">
+                <img src="https://velog.velcdn.com/images/yunlinit/post/543e2881-2ecb-4c78-bcff-be8164e73b8a/image.png"
+                    alt="My Skills Overview Image">
+            </div>
+        </section>
+
+        <section class="my-projects">
+            <h2>My Projects*</h2>
+            <div class="projects-grid">
+                <a href="https://github.com/itkmc/24_project" target="_blank" class="project-card">
+                    <img src="https://velog.velcdn.com/images/itkang0219/post/182c1465-4e1c-4016-a3be-84f153ae23b7/image.png"
+                        alt="Project Thumbnail 1">
+                    <div class="project-title">📖 타임라인으로 보는 역사 및 다양한 역사 콘텐츠</div>
+                </a>
+                <a href="https://github.com/itkmc/IMMusic_project" target="_blank" class="project-card">
+                    <img src="https://velog.velcdn.com/images/itkang0219/post/ed0c595e-0d4e-42d8-b507-189659d02df0/image.png"
+                        alt="Project Thumbnail 2">
+                    <div class="project-title">🎹 클래식 음악단 소개하는 홈페이지</div>
+                </a>
+                <a href="https://github.com/itkmc/portfolio" target="_blank" class="project-card">
+                    <img src="https://velog.velcdn.com/images/itkang0219/post/86a9ed4d-1571-44fa-bbda-e2587d6ffb1f/image.png"
+                        alt="Project Thumbnail 3">
+                    <div class="project-title">👩🏻‍💻 포트폴리오</div>
+                </a>
+                <a href="https://github.com/itkmc/The-Unclosed_project" target="_blank" class="project-card">
+                    <img src="https://velog.velcdn.com/images/itkang0219/post/2550aa2f-79cc-4607-a5ce-7b91944c82e8/image.png"
+                        alt="Project Thumbnail 4">
+                    <div class="project-title">⚖ 우리나라 미제사건 소개 및 모의재판 웹 플랫폼</div>
+                </a>
+                <a href="https://github.com/itkmc/group_escape_room_project" target="_blank" class="project-card">
+                    <img src="https://velog.velcdn.com/images/itkang0219/post/4aa8bc1f-af82-4dd9-bd5f-4548ed545a75/image.png"
+                        alt="Project Thumbnail 5">
+                    <div class="project-title">😱3D 웹 기술을 활용한 1인칭 공포 방탈출 게임</div>
+                </a>
+            </div>
+            <div class="contact-section">
+                <h3>Contact*</h3>
+                <p class="regular-text">📞 010-7518-3408</p>
+                <p class="regular-text">✉️ itkang0219@gmail.com</p>
+                <p>둘 중에 하나로 연락주시면 감사하겠습니다!!!</p>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
